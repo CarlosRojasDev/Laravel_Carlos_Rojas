@@ -17,17 +17,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($empleados as $empleado)
-                <tr>
+                @if(sizeof($empleados) > 0)
+                    @foreach($empleados as $empleado)
+                    <tr>
                     <td>{{$empleado->id}}</td>
                     <td>{{$empleado->Nombre}}</td>
                     <td>{{$empleado->Apellido}}</td>
                     <td>{{$empleado->Identificacion}}</td>
                     <td>{{$empleado->Email}}</td>
-                    <td>{{$empleado->Salario}}</td>
-                    <td><a href="{{ route('empleados.show', $empleado->id) }}">Details</a></td>
-                </tr>
-                @endforeach
+                    <td>{{$empleado->Salario}}</td>                    
+                    <td><a href="/empleados/{{$empleado->id}}">Details</a></td>
+                    </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="7" class="text-center">No hay registros</td>
+                    </tr>
+                
+                @endif
             </tbody>
         </table>
     </div>

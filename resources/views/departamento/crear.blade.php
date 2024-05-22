@@ -30,7 +30,7 @@
                 </div>
             </div>            
             <div class="mb-3 d-flex justify-content-between">
-                <a href="/departamentos">return</a>
+                <a href="/departamentos">Return</a>
                 <button class="btn btn-success" type="submit">Enviar</button>
             </div>
         </form>

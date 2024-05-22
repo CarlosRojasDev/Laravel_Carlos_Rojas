@@ -14,6 +14,7 @@ class EmpleadoController extends Controller
     {
         $empleados = Empleado::all();
         return view('empleado.index', compact('empleados'));
+        //return $empleados;
     }
 
     /**

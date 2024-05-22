@@ -42,7 +42,7 @@
             </div>
         </div>
             <div class="mb-3 d-flex justify-content-between">
-                <a href="/empleados">return</a>                
+                <a href="/empleados">Return</a>                
                 <button class="btn btn-success" type="submit">Actualizar</button>
             </div>            
         </form>        

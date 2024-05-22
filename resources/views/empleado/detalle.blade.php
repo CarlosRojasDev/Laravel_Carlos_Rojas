@@ -40,16 +40,16 @@
             </div>
         </div>
         <div class="mb-3 d-flex justify-content-between">
-            <a href="/empleados">return</a>
+            <a href="/empleados">Return</a>
             <div class="d-flex" style="gap: 5px;">
-                <div>
-                    <a class="btn btn-secondary" href="{{ route('empleados.edit', $empleado->id) }}">Edit</a>
+                <div>                    
+                    <a class="btn btn-secondary" href="/empleados/{{ $empleado->id }}/edit">Edit</a>
                 </div>
                 <form action="{{ route('empleados.destroy', $empleado->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button 
-                    class="btn btn-danger" 
+                    class="btn bg-danger bg-opacity-75 text-white" 
                     type="submit" 
                     onclick="return confirm('El registro se eliminara de forma permanente. \n \n Desea continuar?')">Delete
                     </button>

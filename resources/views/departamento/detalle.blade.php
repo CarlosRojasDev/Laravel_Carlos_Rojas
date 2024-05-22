@@ -34,7 +34,7 @@
                 </div>
             </div>            
             <div class="mb-3 d-flex justify-content-between">
-                <a href="/departamentos">return</a>
+                <a href="/departamentos">Return</a>
                 <div class="d-flex" style="gap: 5px;">
                 <div>
                     <a class="btn btn-secondary" href="{{ route('departamentos.edit', $departamento->id) }}">Edit</a>

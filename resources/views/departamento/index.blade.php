@@ -16,16 +16,22 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($departamentos as $departamento)
-                <tr>
-                    <td>{{$departamento->id}}</td>
-                    <td>{{$departamento->Nombre_Departamento}}</td>
-                    <td>{{$departamento->Telefono}}</td>
-                    <td>{{$departamento->Numero_empleados}}</td>
-                    <td>{{$departamento->Gerente}}</td>
-                    <td><a href="{{ route('departamentos.show', $departamento->id) }}">Details</a></td>
-                </tr>
-                @endforeach
+                @if(sizeof($departamentos) > 0)
+                    @foreach($departamentos as $departamento)
+                    <tr>
+                        <td>{{$departamento->id}}</td>
+                        <td>{{$departamento->Nombre_Departamento}}</td>
+                        <td>{{$departamento->Telefono}}</td>
+                        <td>{{$departamento->Numero_empleados}}</td>
+                        <td>{{$departamento->Gerente}}</td>
+                        <td><a href="{{ route('departamentos.show', $departamento->id) }}">Details</a></td>
+                    </tr>
+                    @endforeach
+                @else
+                    <tr>
+                        <td colspan="6" class="text-center">No hay registros</td>
+                    </tr>
+                @endif
             </tbody>
         </table>
     </div>

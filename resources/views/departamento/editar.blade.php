@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="col-7">
-        <h1>Crear departamento</h1>
+        <h1>Editar departamento</h1>
         <form action="/departamentos/{{$departamento->id}}" method="post"> 
             @csrf
             @method('PUT')
@@ -36,7 +36,7 @@
                 </div>
             </div>            
             <div class="mb-3 d-flex justify-content-between">
-                <a href="/departamentos">return</a>
+                <a href="/departamentos">Return</a>
                 <button class="btn btn-success" type="submit">Actualizar</button>
             </div>
         </form>
